@@ -1,5 +1,5 @@
 $(function() {
-
+  var score = 0;
   var picList =   [
                         {word: 'Apple', phraes: 'an apple', file: 'apple1.jpg'},
                         {word: 'Ball', phrase: 'a ball', file: 'ball.jpg'},
@@ -21,7 +21,6 @@ $(function() {
       $('#picture-div').empty();
       $('#feedback').html('Drag the picture that matches the word above to the box below.');
       var options = Array();
-      var score = 0;
 
       var answer = picList[Math.floor(Math.random() * picList.length)];
       options.push(answer);
