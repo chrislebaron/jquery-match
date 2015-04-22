@@ -60,14 +60,16 @@ $(function() {
     var validateThis = function (item) {
       if(item.id===answer.word){
         console.log('Correct!');
-        $('#dropzone').html('Yes! That is '+item.alt+'!');
+        $('#feedback').html('Yes! This is '+item.alt+'!');
+        $('#dropzone').addClass("answer-correct");
         
         ;
       }
       else{
         console.log('Incorrect!');
-        $('#dropzone').html('Woah there. That is not '+answer.phrase+'. That was '+item.alt+'! Try again.');
+        $('#feedback').html('Woah there. That is not '+answer.phrase+'. That was '+item.alt+'! Try again.');
         $(item).hide();
+        $('#dropzone').addClass("answer-wrong");
       }
        //do stuff
        
