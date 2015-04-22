@@ -1,0 +1,62 @@
+body {
+
+}
+
+h3 {
+	font-size: 40px;
+	font-family: arial;
+	color:#4dADDD;
+}
+
+#wrapper {
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+#nav {
+	width: 100%;
+	line-height: 50px;
+	background: #88E3D7;
+}
+
+#main {
+	background: #fff;
+}
+
+#vocab-div {
+	text-align: center;
+	
+	height: 300px;
+}
+
+#vocab-div h3 {
+
+}
+
+#dropzone {
+	max-width: 300px;
+	background: #FFFFE8;
+	height: 140px;
+	margin: 10px auto;
+	border: 3px dotted #ccc;
+	padding: 10px;
+}
+
+#picture-div {
+	height:	200px;
+	width: 800px;
+	margin: auto;
+	margin-bottom: 50px;
+	border: 3px dotted #FFADDD;
+	display: block;
+}
+
+#picture-div img {
+	/*max-height: 150px;*/
+	max-width:150px;
+	display:inline-block;
+	margin: 25px 30px;
+
+}
+
+
