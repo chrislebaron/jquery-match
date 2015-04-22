@@ -1,7 +1,7 @@
 $(function() {
   var score = 0;
   var picList =   [
-                        {word: 'Apple', phraes: 'an apple', file: 'apple1.jpg'},
+                        {word: 'Apple', phrase: 'an apple', file: 'apple1.jpg'},
                         {word: 'Ball', phrase: 'a ball', file: 'ball.jpg'},
                         {word: 'Cat', phrase: 'a cat', file: 'cat1.jpg'},
                         {word: 'Cheese', phrase: 'cheese', file: 'cheese.jpg'},
