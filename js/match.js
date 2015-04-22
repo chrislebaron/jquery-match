@@ -19,6 +19,7 @@ $(function() {
     // Choose a random picture as an answer
     var generateGame = function() {
       $('#picture-div').empty();
+      $('#feedback').html('Drag the picture that matches the word above to the box below.');
       options = Array();
       var answer = picList[Math.floor(Math.random() * picList.length)];
       options.push(answer);
@@ -61,6 +62,7 @@ $(function() {
       if(item.id===answer.word){
         console.log('Correct!');
         $('#feedback').html('Yes! This is '+item.alt+'!');
+        $( ".drag" ).draggable("disable");
         $('#dropzone').addClass("answer-correct");
         
         ;
