@@ -32,7 +32,6 @@ $(function() {
           if($.inArray(random,options)===-1){
              options.push(random);
           }
-          
         }  
       }
       renderOptions(numOptions);
@@ -44,16 +43,13 @@ $(function() {
         item=i+1;
         $('#picture-div').append('<img id="'+options[i].word+'" class="drag" src="images/'+options[i].file+'">')
       }
-    }
-    generateGame();
-
-    // Move and validate stuff
+      // Move and validate stuff
     $( ".drag" ).draggable({ revert: "invalid" });
     $( "#dropzone" ).droppable({
       drop: function( event, ui ) {
         var item = event.toElement.id;
-        $('#dropzone').html('You dropped '+item);
-        validateThis(event);
+        
+        validateThis(item);
         // $( this )
         //   .addClass( "ui-state-highlight" )
         //   .find( "p" )
@@ -61,10 +57,20 @@ $(function() {
         
       }
     });
-    var validateThis = function () {
+    var validateThis = function (item) {
+      if(item===answer.word){
+        console.log('Correct!');
+        $('#dropzone').html('Yes! That is a(n) '+item);
+      }
+      else{
+        console.log('Incorrect!');
+        $('#dropzone').html('Woah there. That is not a '+answer.word+'. That is a '+item+'! Try again.');
+      }
        //do stuff
        
     }
+    }
+    generateGame();
 
     
 
