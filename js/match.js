@@ -20,7 +20,9 @@ $(function() {
     var generateGame = function() {
       $('#picture-div').empty();
       $('#feedback').html('Drag the picture that matches the word above to the box below.');
-      options = Array();
+      var options = Array();
+      var score = 0;
+
       var answer = picList[Math.floor(Math.random() * picList.length)];
       options.push(answer);
       $('#vocab-div h3').html(answer.word);
@@ -64,7 +66,7 @@ $(function() {
         $('#feedback').html('Yes! This is '+item.alt+'!');
         $( ".drag" ).draggable("disable");
         $('#dropzone').addClass("answer-correct");
-        
+        score++;
         ;
       }
       else{
@@ -72,8 +74,11 @@ $(function() {
         $('#feedback').html('Woah there. That is not '+answer.phrase+'. That was '+item.alt+'! Try again.');
         $(item).hide();
         $('#dropzone').addClass("answer-wrong");
+        if(score>0){
+          score--;
+        }
       }
-       //do stuff
+       console.log(score);
        
     }
     }
