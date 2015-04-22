@@ -22,20 +22,18 @@ $(function() {
       options = Array();
       var answer = picList[Math.floor(Math.random() * picList.length)];
       options.push(answer);
+      $('#vocab-div h3').html(answer.word);
 
       // Choose two more as options
-      var numOptions=2;
+      var numOptions=3;
       var renderOptions = function(numOptions){
-        for(i=0; i<numOptions;){
+        for(i=0; options.length<numOptions;){
           var random = picList[Math.floor(Math.random() * picList.length)];
           if($.inArray(random,options)===-1){
              options.push(random);
           }
-          if(options.length!==numOptions-1){
-            i++;
-          }
+          
         }  
-       
       }
       renderOptions(numOptions);
       // Shuffle!
